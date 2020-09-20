@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="12dp"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ln_html"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@color/lightestBlue">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/addtravelplan"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="HTML"
+            android:layout_gravity="center_vertical"
+            android:layout_marginLeft="10dp"
+            android:textSize="15dp"
+            android:textStyle="bold"
+           />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:visibility="visible"
+            android:background="#292E3E">
+        </View>
+
+        <LinearLayout
+            android:id="@+id/ln_css"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@color/lightestBlue">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/ic_baseline_code_24"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="CSS"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="wrap_content"
+            android:layout_height="0.5dp"
+            android:visibility="visible"
+            android:background="#292E3E">
+        </View>
+        <LinearLayout
+            android:id="@+id/ln_bootStrap"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@color/lightestBlue">
+
+            <ImageView
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/abc_vector_test"
+                android:background="@color/orange"
+                android:layout_marginLeft="5dp"
+                android:layout_gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="BootStrap"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="10dp"
+                android:textSize="15dp"
+                android:textStyle="bold"
+                />
+
+        </LinearLayout>
+            
+    </LinearLayout>
+</LinearLayout>

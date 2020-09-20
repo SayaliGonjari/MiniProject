@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/txt_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="#111"
+        android:textSize="15sp"
+        tools:text="Name" />
+
+    <TextView
+        android:id="@+id/txt_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Email"
+        android:layout_below="@id/txt_name"
+        android:textSize="15sp"
+        android:textColor="#111"/>
+
+    <TextView
+        android:id="@+id/txt_mobNo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:text="Mobile No"
+        android:layout_below="@id/txt_email"
+        android:textSize="15sp"
+        android:layout_marginBottom="5dp"
+        android:textColor="#111"/>
+
+
+
+</LinearLayout>
