@@ -3,18 +3,30 @@ package com.project.miniproject
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
-import android.view.View
+import android.view.*
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.custom_toast.*
 
-class MainActivity : AppCompatActivity() {
+class MainActivity() : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+       // requestWindowFeature(Window.FEATURE_NO_TITLE);//will hide the title
+        supportActionBar?.setTitle("HOME")
+      //  supportActionBar?.hide() //hide the title bar
         setContentView(R.layout.activity_main)
+
+        val layout = layoutInflater.inflate(R.layout.custom_toast,linearLayout)
+        val myToast = Toast(applicationContext)
+        myToast.duration = Toast.LENGTH_LONG
+        myToast.setGravity(Gravity.CENTER_VERTICAL,0,0)
+        myToast.view = layout
+        myToast.show()
+
+
+
 
         Toast.makeText(this@MainActivity, "Welcome to the Activity", Toast.LENGTH_SHORT).show()
 
@@ -53,6 +65,15 @@ class MainActivity : AppCompatActivity() {
             intent.putExtra("MobileNo", "1234567895");
             startActivity(intent)
         })
+
+        btn_contextmenu.setOnClickListener(View.OnClickListener {
+            startActivity(Intent(this@MainActivity,ContextMenuActivity::class.java))
+        })
+
+        btn_WebPageClick.setOnClickListener(View.OnClickListener {
+
+            startActivity(Intent(this,WebPageActivity::class.java))
+        })
     }
 
 
@@ -64,7 +85,7 @@ class MainActivity : AppCompatActivity() {
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
 
         when (item.itemId) {
-            
+
 
 
             R.id.css -> Toast.makeText(this, "Clicked on CSS", Toast.LENGTH_SHORT).show()
@@ -77,3 +98,5 @@ class MainActivity : AppCompatActivity() {
 
 
 }
+
+
