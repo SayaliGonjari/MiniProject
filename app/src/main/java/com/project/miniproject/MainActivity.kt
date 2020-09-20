@@ -24,13 +24,12 @@ class MainActivity : AppCompatActivity() {
             alertDialog.setMessage("Alert Message")
             alertDialog.setIcon(android.R.drawable.arrow_up_float)
 
-            alertDialog.setPositiveButton("Yes") {
-                dialogInterface, which -> Toast.makeText(this@MainActivity, "Clicked on Yes !!!!!!!", Toast.LENGTH_SHORT).show()
+            alertDialog.setPositiveButton("Yes") { dialogInterface, which ->
+                Toast.makeText(this@MainActivity, "Clicked on Yes !!!!!!!", Toast.LENGTH_SHORT).show()
             }
 
-            alertDialog.setNegativeButton("No"){
-                dialogInterface,which->
-                Toast.makeText(this@MainActivity,"Click on No !!!!!!", Toast.LENGTH_SHORT).show()
+            alertDialog.setNegativeButton("No") { dialogInterface, which ->
+                Toast.makeText(this@MainActivity, "Click on No !!!!!!", Toast.LENGTH_SHORT).show()
             }
 
 
@@ -43,15 +42,15 @@ class MainActivity : AppCompatActivity() {
         }
 
         btn_listView.setOnClickListener(View.OnClickListener {
-            startActivity(Intent(this@MainActivity,DisplayListViewContents::class.java))
+            startActivity(Intent(this@MainActivity, DisplayListViewContents::class.java))
 
         })
 
         btn_userData.setOnClickListener(View.OnClickListener {
-            intent = Intent(this@MainActivity,ShareUserData::class.java)
-            intent.putExtra("Name","John");
-            intent.putExtra("Email","sayali@gmail.com");
-            intent.putExtra("MobileNo","1234567895");
+            intent = Intent(this@MainActivity, ShareUserData::class.java)
+            intent.putExtra("Name", "John");
+            intent.putExtra("Email", "sayali@gmail.com");
+            intent.putExtra("MobileNo", "1234567895");
             startActivity(intent)
         })
     }
